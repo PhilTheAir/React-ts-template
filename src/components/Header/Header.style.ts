@@ -7,6 +7,8 @@ export const StyledView = styled(Flex)`
   flex-direction: column;
 `;
 
-export const StyledButton = styled(Box)`
-  color: palevioletred;
+export const StyledDiv = styled(Box)`
+  background-color: palevioletred;
+  width: 400px;
+  height: 200px;
 `;
