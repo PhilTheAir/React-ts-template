@@ -1,18 +1,21 @@
 import * as React from 'react';
 import { StyledDiv } from './Header.style';
+import { ContextConsumer } from '../../contexts';
 
 interface IProps {
   name?: string;
 }
 
 const Header: React.SFC<IProps> = (props: IProps) => (
-  <StyledDiv className="greeting">
-    Hello, {props.name}! Welcome to React and TypeScript.
-  </StyledDiv>
+  <ContextConsumer>
+    {
+      contextObj => (
+        <StyledDiv className="greeting">
+          Hello, {props.name || contextObj.name}! Welcome to React and TypeScript.
+        </StyledDiv>
+      )
+    }
+  </ContextConsumer>
 );
-
-Header.defaultProps = {
-  name: 'world',
-};
 
 export default Header;
