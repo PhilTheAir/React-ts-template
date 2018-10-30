@@ -1,21 +1,12 @@
 import * as React from 'react';
+import Routes from './routes';
 import './App.css';
-import { Description } from './components/Description';
-import { Header } from './components/Header';
-import logo from './logo.svg';
 
-class App extends React.Component {
-  public render() {
+export default class App extends React.Component {
+  render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Header name="REACT" />         
-        </header>
-        <Description countBy={3} />
-      </div>
+      <Routes />
     );
   }
 }
 
-export default App;
