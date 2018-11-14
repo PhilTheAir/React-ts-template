@@ -14,8 +14,7 @@
     "styled-components": "^4.0.2"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
-    "startserver": "cd ./server & yarn start",
+    "start": "react-scripts-ts start & cd ./server && yarn start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
