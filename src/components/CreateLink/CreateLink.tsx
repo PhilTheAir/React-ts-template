@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Query } from 'react-apollo';
 import { Link } from '../Link';
-import { FEED_QUERY } from './LinkList.gql';
+import { FEED_QUERY } from './CreateLink.gql';
 
 interface IProps {
 
@@ -11,7 +11,7 @@ interface IState {
 
 }
 
-export default class LinkList extends React.Component<IProps, IState> {
+export default class CreateLink extends React.Component<IProps, IState> {
   render() {
     return (
       <Query query={FEED_QUERY}>
