@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { LinkList } from '../components/LinkList';
+import { CreateLink } from '../components/CreateLink';
 
 export default class FormLayout extends React.Component {
   render() {
     return (
-      <LinkList />
+      <CreateLink />
     );
   }
 }

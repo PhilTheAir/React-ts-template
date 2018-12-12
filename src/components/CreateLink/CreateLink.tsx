@@ -1,33 +1,50 @@
 import * as React from 'react';
-import { Query } from 'react-apollo';
-import { Link } from '../Link';
-import { FEED_QUERY } from './CreateLink.gql';
+import { Mutation } from 'react-apollo';
+import { withRouter } from 'react-router';
+import { POST_MUTATION } from './CreateLink.gql';
 
 interface IProps {
-
+  history?: any;
 }
 
 interface IState {
 
 }
 
-export default class CreateLink extends React.Component<IProps, IState> {
+class CreateLink extends React.Component<IProps, IState> {
+  readonly state = {
+    description: '',
+    url: '',
+  }
+
   render() {
+    const { description, url } = this.state
     return (
-      <Query query={FEED_QUERY}>
-        {({ loading, error, data }) => {
-          if (loading) return <div>Fetching</div>
-          if (error) return <div>Error</div>
-          const linksToRender = data.feed.links;
-          return (
-            <div>
-              {
-                linksToRender.map((link: any) => <Link key={link.id} link={link} />)
-              }
-            </div>
-          )
-        }}
-      </Query>
+      <div>
+        <div className="flex flex-column mt3">
+          <input
+            className="mb2"
+            value={description}
+            onChange={e => this.setState({ description: e.target.value })}
+            type="text"
+            placeholder="A description for the link"
+          />
+          <input
+            className="mb2"
+            value={url}
+            onChange={e => this.setState({ url: e.target.value })}
+            type="text"
+            placeholder="The URL for the link"
+          />
+        </div>
+        <Mutation mutation={POST_MUTATION} variables={{ description, url }} onCompleted={() => this.props.history.push('/')}>
+          {
+            (postMutation: any) => <button onClick={postMutation}>Submit</button>
+          }
+        </Mutation>
+      </div>
     )
   }
 }
+
+export default withRouter(CreateLink as any);
