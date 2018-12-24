@@ -21,16 +21,14 @@ class CreateLink extends React.Component<IProps, IState> {
     const { description, url } = this.state
     return (
       <div>
-        <div className="flex flex-column mt3">
+        <div>
           <input
-            className="mb2"
             value={description}
             onChange={e => this.setState({ description: e.target.value })}
             type="text"
             placeholder="A description for the link"
           />
           <input
-            className="mb2"
             value={url}
             onChange={e => this.setState({ url: e.target.value })}
             type="text"

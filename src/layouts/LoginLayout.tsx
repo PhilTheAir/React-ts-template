@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { Header } from '../components/Header';
-import { LinkList } from '../components/LinkList';
+import { Login } from '../components/Login';
 
-export default class HomeLayout extends React.Component {
+export default class LoginLayout extends React.Component {
   render() {
     return (
       <React.Fragment>
         <Header />
-        <LinkList />
+        <Login />
       </React.Fragment>
     );
   }
