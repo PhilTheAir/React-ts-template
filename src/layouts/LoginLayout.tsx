@@ -7,7 +7,7 @@ export default class LoginLayout extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <Login />
+        <Login history={{}} />
       </React.Fragment>
     );
   }

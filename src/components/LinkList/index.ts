@@ -1,1 +1,1 @@
-export { default as LinkList } from './LinkList';
+export { default } from './LinkList';

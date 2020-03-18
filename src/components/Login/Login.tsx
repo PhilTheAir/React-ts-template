@@ -55,7 +55,7 @@ export default class Login extends React.Component<IProps, IState> {
             onCompleted={(data: any) => this.confirm(data)}
           >
             {
-              mutation => (
+              (mutation: any) => (
                 <div onClick={mutation}>
                   {login ? 'login' : 'create account'}
                 </div>

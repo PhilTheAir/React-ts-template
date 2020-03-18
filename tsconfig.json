@@ -18,10 +18,14 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["react", "jest"]
   },
   "exclude": [
     "node_modules",
+    "lib",
+    "tests",
     "build",
     "scripts",
     "acceptance-tests",

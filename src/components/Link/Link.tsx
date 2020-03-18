@@ -1,20 +1,13 @@
 import * as React from 'react';
-
-interface IProps {
-  link: {
-    description: string;
-    url: string;
-  }
-}
+import { linksInfo } from '.';
 
 interface IState {
 
 }
 
-export default class Link extends React.Component<IProps, IState> {
+export class Link extends React.Component<linksInfo, IState> {
   render() {
-    const { link } = this.props;
-    const { description, url } = link;
+    const { description, url } = this.props;
     return (
       <div>
         <div>
