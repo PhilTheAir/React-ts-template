@@ -60,20 +60,9 @@
     "typescript": "^3.5.2"
   },
   "jest": {
-    "verbose": true,
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,tsx}",
       "!**/node_modules/**"
-    ],
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    },
-    "moduleFileExtensions": [
-      "js",
-      "jsx"
-    ],
-    "transformIgnorePatterns": [
-      "/node_modules/(?!runway).+\\.js$"
     ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
@@ -81,18 +70,10 @@
       "^react$": "preact-compat",
       "^react-dom$": "preact-compat"
     },
-    "collectCoverage": true,
     "coverageReporters": [
       "json",
       "html"
     ],
-    "moduleDirectories": [
-      "node_modules",
-      "src"
-    ],
-    "globals": {
-      "API_ENV": "DEV"
-    },
     "coverageThreshold": {
       "global": {
         "statements": 50,
