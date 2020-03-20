@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/react-hooks';
 import {
   Link, 
   IFeedProps,
-  linksInfo
+  ILinksInfo
 } from '../Link';
 
 // step 9
@@ -20,7 +20,7 @@ const LinkList = () => {
   return (
     <div>
       {
-        links.map((link: linksInfo) => <Link key={link.id} {...link} />)
+        links.map((link: ILinksInfo) => <Link key={link.id} {...link} />)
       }
     </div>
   )

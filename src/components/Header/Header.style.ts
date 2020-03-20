@@ -4,7 +4,8 @@ import styled from 'styled-components';
 export const StyledView = styled(Flex)`
   background-color: papayawhip;
   flex: 1;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
 `;
 
 export const StyledDiv = styled(Box)`

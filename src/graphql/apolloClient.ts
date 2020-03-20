@@ -3,8 +3,9 @@ import { ApolloClient } from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
+// step 20
 import { setContext } from 'apollo-link-context';
-import { AUTH_TOKEN } from '../auth';
+import { AUTH_TOKEN } from '../utils';
 
 // step 3
 // this is where the GraphQL server will be running on
@@ -13,6 +14,7 @@ const httpLink = createHttpLink({
   uri
 });
 
+// step 21
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem(AUTH_TOKEN);
   return {
@@ -25,6 +27,7 @@ const authLink = setContext((_, { headers }) => {
 
 // step 4
 const client = new ApolloClient({
+  // step 22
   link: authLink.concat(httpLink),
   cache: new InMemoryCache()
 });

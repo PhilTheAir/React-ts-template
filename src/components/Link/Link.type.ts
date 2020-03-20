@@ -1,6 +1,6 @@
 // step 7a
 
-export interface linksInfo {
+export interface ILinksInfo {
   id: string;
   createdAt: string;
   url: string;
@@ -9,6 +9,6 @@ export interface linksInfo {
 
 export interface IFeedProps {
   feed: {
-    links: Array<linksInfo>
+    links: Array<ILinksInfo>
   }
 }

@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { linksInfo } from '.';
+import { ILinksInfo } from '.';
 
 interface IState {
 
 }
 
-export class Link extends React.Component<linksInfo, IState> {
+export class Link extends React.Component<ILinksInfo, IState> {
   render() {
     const { description, url } = this.props;
     return (
