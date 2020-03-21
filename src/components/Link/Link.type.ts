@@ -2,9 +2,19 @@
 
 export interface ILinksInfo {
   id: string;
-  createdAt: string;
+  createdAt: number;
   url: string;
   description: string;
+  postedBy: {
+    id: string;
+    name: string;
+  },
+  votes: Array<{
+    id: string;
+    user: {
+      id: string;
+    }
+  }>
 }
 
 export interface IFeedProps {
